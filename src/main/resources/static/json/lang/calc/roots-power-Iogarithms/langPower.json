@@ -1,0 +1,114 @@
+{
+  "power": {
+    "en": "raising a number to a power",
+    "ua": "зведення числа до ступеня",
+    "ru": "возведение числа в степень"
+  },
+  "power-definition": {
+    "en": "this is an online calculator for exponents. calculate the power of large base integers and real numbers.",
+    "ua": "це онлайн-калькулятор для експонент. обчислювати ступінь великих цілих і дійсних чисел.",
+    "ru": "это онлайн-калькулятор для показателей. вычислить мощность больших целых и действительных чисел."
+  },
+
+  "text-area": {
+    "en": "what is a power of a number?",
+    "ua": "що таке степінь числа?",
+    "ru": "что такое степень числа?"
+  },
+  "title-explanation-plus": {
+    "en": "what is a power of a number?",
+    "ua": "що таке степінь числа?",
+    "ru": "что такое степень числа?"
+  },
+  "text-explanation-plus-1": {
+    "en": "number",
+    "ua": "число",
+    "ru": "число"
+  },
+  "text-explanation-plus-2": {
+    "en": "is called the",
+    "ua": "називається",
+    "ru": "называется"
+  },
+  "text-explanation-plus-3": {
+    "en": "power of",
+    "ua": "степінью числа",
+    "ru": "степенью числа"
+  },
+  "text-explanation-plus-4": {
+    "en": "if",
+    "ua": "якщо",
+    "ru": "если"
+  },
+  "text-explanation-plus-5": {
+    "en": "that is, the number",
+    "ua": "тобто число",
+    "ru": "то есть число"
+  },
+  "text-explanation-plus-6": {
+    "en": "is equal to the number",
+    "ua": "дорівнює числу",
+    "ru": "равно числу"
+  },
+  "text-explanation-plus-7": {
+    "en": "multiplied by itself",
+    "ua": "помноженого саме на себе",
+    "ru": "умноженному само на себя"
+  },
+  "text-explanation-plus-8": {
+    "en": "times.",
+    "ua": "раз.",
+    "ru": "разів."
+  },
+  "text-explanation-plus-9": {
+    "en": "the number",
+    "ua": "число",
+    "ru": "число"
+  },
+  "text-explanation-plus-10": {
+    "en": "is usually called the exponent, and the number",
+    "ua": "зазвичай називають показником ступеня, а число",
+    "ru": "обычно называют показателем степени, а число"
+  },
+  "text-explanation-plus-11": {
+    "en": "is the base.",
+    "ua": "- основою ступеня.",
+    "ru": "— основанием степени."
+  },
+
+  "example-title-plus": {
+    "en": "Calculate powers",
+    "ua": "Обчислити ступеня",
+    "ru": "вычислить степени"
+  },
+  "example-plus-1": {
+    "en": "solution:",
+    "ua": "рішення:",
+    "ru": "решение:"
+  },
+  "example-plus-2": {
+    "en": "let's raise the number",
+    "ua": "зведемо п'яту ступінь число",
+    "ru": "возведём в пятую степень число"
+  },
+  "example-plus-3": {
+    "en": "to the fifth power, that is, calculate the value of the expression",
+    "ua": "тобто обчислимо значення виразу",
+    "ru": "то есть вычислим значение выражения"
+  },
+  "example-plus-4": {
+    "en": "by the definition given above,",
+    "ua": "за визначенням, даним вище,",
+    "ru": "по определению, данному выше,"
+  },
+  "title-explanation-negative": {
+    "en": "negative exponent",
+    "ua": "негативний показник ступеня",
+    "ru": "отрицательный показатель степени"
+  },
+  "text-explanation-negative-1": {
+    "en": "exponents can be not only positive, but also negative",
+    "ua": "показники ступеня можуть бути не тільки позитивними, а й негативними",
+    "ru": "показатели степени могут быть не только положительными, но и отрицательными"
+  }
+}

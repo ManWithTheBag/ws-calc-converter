@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<div th:replace="~{fragments/header :: header(title = 'Prime factors', cssLick = '/css/calc/numberTheory/primeFactors.css')}"></div>
+
+<body>
+<!--For good footer position-->
+<div id="page-container">
+    <div id="content-wrap">
+
+        <!--  Navbar section-->
+        <div th:replace="~{fragments/navbar :: navbar}"></div>
+
+        <!--Content section-->
+        <div class="_content-position">
+            <!--Text section-->
+            <div>
+                <samp class="_uppercase-each-sentences _lang-prime_factor _text-mainTitle">factoring a number into prime
+                    factors</samp>
+                <br>
+                <br>
+                <samp class="_uppercase-each-sentences _lang-prime_factor-definition _text-simple">any natural number n
+                    > 1 can
+                    be represented as a product of prime numbers. this representation is called the factorization of n
+                    into prime factors.</samp>
+            </div>
+
+            <!--Calc form section-->
+            <div class=" _new-section-position _box-background-dark _border-dark">
+
+                <input id="input-number" class="_lang-placeholder-number _input-number _input-number-long _border-light"
+                       type="number"
+                       step="1" placeholder="Number">
+
+                <!--Button section-->
+                <div class="_items-align-row-center">
+                    <div>
+                        <button id="calc-button"
+                                class="_lang-button-calc _uppercase-each-sentences btn btn-secondary btn-lg _button-calc"
+                                onclick="calcButton()">calculate
+                        </button>
+                    </div>
+                    <div>
+                        <button id="reset-button"
+                                class="_lang-button-reset _uppercase-each-sentences btn btn-secondary btn-lg _button-reset"
+                                onclick="resetButton()">reset
+                        </button>
+                    </div>
+                </div>
+
+                <!--Result section-->
+                <div class="_new-section-position _text-align-center">
+                    <samp id="result-exception" class="_text-simple _text-align-center"></samp>
+
+                    <table id="result-table-body" class="_item-align-center ">
+
+                    </table>
+                </div>
+            </div>
+
+            <!--Text area-->
+            <div class="_new-section-position _text-simple _box-background-light _border-dark">
+                <div class="_items-column">
+                    <samp class="_uppercase-each-sentences _lang-explanation-title _text-minorTitle">algorithm for
+                        factoring numbers into prime factors:</samp>
+                    <samp class="_uppercase-each-sentences _lang-explanation-1 _text-simple _item-margin-05rem-vertical">draw
+                        a
+                        vertical line.</samp>
+                    <samp class="_uppercase-each-sentences _lang-explanation-2 _text-simple _item-margin-05rem-vertical">to
+                        the
+                        left of the line we write the number.</samp>
+                    <samp class="_uppercase-each-sentences _lang-explanation-3 _text-simple _item-margin-05rem-vertical">to
+                        the
+                        right of the line we write the prime divisor of this number.</samp>
+                    <samp class="_uppercase-each-sentences _lang-explanation-4 _text-simple _item-margin-05rem-vertical">on
+                        the
+                        left we write the number that was formed as a result of division.</samp>
+                    <samp class="_uppercase-each-sentences _lang-explanation-5 _text-simple _item-margin-05rem-vertical">continue
+                        the process until there is 1 left on the left.</samp>
+                </div>
+            </div>
+
+            <!--Examples section-->
+            <div class="_new-section-position _box-background-dark _border-dark">
+                <samp class="_lang-example _uppercase-each-sentences _text-mainTitle">examples</samp>
+                <br>
+                <div class="_items-align-row-center">
+                    <samp class="_lang-example-title _uppercase-each-sentences _text-minorTitle">factor the
+                        number</samp>
+                    <samp class="_text-minorTitle _item-margin-05rem-horizon">36</samp>
+                </div>
+
+                <div class="">
+                    <samp class="_lang-example-1 _uppercase-each-sentences _text-simple">draw a line and write 36 on the
+                        left. the smallest prime divisor of 36 is 2. divide</samp>
+                    <div class="_frac _item-margin-05rem-horizon">
+                        <span id="reduce-solve-num" class="_text-simple">36</span>
+                        <span class="symbol">/</span>
+                        <span id="reduce-solve-denom" class="bottom _text-simple">2</span>
+                    </div>
+                    <samp class="_text-simple">= 18. 18</samp>
+                    <samp class="_lang-example-2 _text-simple">write it under the number</samp>
+                    <samp class="_text-simple _item-margin-05rem-horizon">36.</samp>
+
+                    <table class="_item-align-center">
+                        <tr>
+                            <td class="_text-simple _left-column">36</td>
+                            <td class="_text-simple _right-column">2</td>
+                        </tr>
+                        <tr>
+                            <td class="_text-simple _left-column">18</td>
+                            <td class="_text-simple _right-column"></td>
+                        </tr>
+                    </table>
+
+                    <samp class="_lang-example-3 _uppercase-each-sentences _text-simple">the smallest divisor of 18 is
+                        2. divide</samp>
+                    <div class="_frac _item-margin-05rem-horizon">
+                        <span class="_text-simple">18</span>
+                        <span class="symbol">/</span>
+                        <span class="bottom _text-simple">2</span>
+                    </div>
+                    <samp class="_text-simple">= 9. 9</samp>
+                    <samp class="_lang-example-2 _text-simple">write it under the number</samp>
+                    <samp class="_text-simple _item-margin-05rem-horizon">18.</samp>
+                    <table class="_item-align-center">
+                        <tr>
+                            <td class="_text-simple _left-column">36</td>
+                            <td class="_text-simple _right-column">2</td>
+                        </tr>
+                        <tr>
+                            <td class="_text-simple _left-column">18</td>
+                            <td class="_text-simple _right-column">2</td>
+                        </tr>
+                        <tr>
+                            <td class="_text-simple _left-column">9</td>
+                            <td class="_text-simple _right-column"></td>
+                        </tr>
+                    </table>
+
+                    <samp class="_lang-example-4 _uppercase-each-sentences _text-simple">the smallest divisor of 9 is 3.
+                        divide</samp>
+                    <div class="_frac _item-margin-05rem-horizon">
+                        <span class="_text-simple">9</span>
+                        <span class="symbol">/</span>
+                        <span class="bottom _text-simple">3</span>
+                    </div>
+                    <samp class="_text-simple">= 3. 3</samp>
+                    <samp class="_lang-example-2 _text-simple">write it under the number</samp>
+                    <samp class="_text-simple _item-margin-05rem-horizon">9.</samp>
+                    <table class="_item-align-center">
+                        <tr>
+                            <td class="_text-simple _left-column">36</td>
+                            <td class="_text-simple _right-column">2</td>
+                        </tr>
+                        <tr>
+                            <td class="_text-simple _left-column">18</td>
+                            <td class="_text-simple _right-column">2</td>
+                        </tr>
+                        <tr>
+                            <td class="_text-simple _left-column">9</td>
+                            <td class="_text-simple _right-column">3</td>
+                        </tr>
+                        <tr>
+                            <td class="_text-simple _left-column">3</td>
+                            <td class="_text-simple _right-column"></td>
+                        </tr>
+                    </table>
+
+                    <samp class="_lang-example-5 _uppercase-each-sentences _text-simple">3 is a prime number that can
+                        only be divided by 3 and 1. we write 3 opposite the three. divide</samp>
+                    <div class="_frac _item-margin-05rem-horizon">
+                        <span class="_text-simple">3</span>
+                        <span class="symbol">/</span>
+                        <span class="bottom _text-simple">3</span>
+                    </div>
+                    <samp class="_text-simple">= 1. 1</samp>
+                    <samp class="_lang-example-2 _text-simple">write it under the number</samp>
+                    <samp class="_text-simple _item-margin-05rem-horizon">3.</samp>
+                    <table class="_item-align-center">
+                        <tr>
+                            <td class="_text-simple _left-column">36</td>
+                            <td class="_text-simple _right-column">2</td>
+                        </tr>
+                        <tr>
+                            <td class="_text-simple _left-column">18</td>
+                            <td class="_text-simple _right-column">2</td>
+                        </tr>
+                        <tr>
+                            <td class="_text-simple _left-column">9</td>
+                            <td class="_text-simple _right-column">3</td>
+                        </tr>
+                        <tr>
+                            <td class="_text-simple _left-column">3</td>
+                            <td class="_text-simple _right-column">3</td>
+                        </tr>
+                        <tr>
+                            <td class="_text-simple _left-column">1</td>
+                            <td class="_text-simple _right-column"></td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+            </div>
+
+            <!--Table of prime numbers up to 1000-->
+            <div class="_new-section-position _box-background-light _border-dark">
+                <div>
+                    <samp class="_lang-prime_numbers-table _uppercase-each-sentences _text-minorTitle">table of prime
+                        numbers up to 1000</samp>
+                </div>
+
+                <table class="_table-prime_numbers">
+                    <tbody class="_table-body-prime_numbers">
+                    <tr class="_table-row-prime_number">
+                        <td>2</td>
+                        <td>3</td>
+                        <td>5</td>
+                        <td>7</td>
+                        <td>11</td>
+                        <td>13</td>
+                        <td>17</td>
+                        <td>19</td>
+                    </tr>
+                    <tr class="_table-row-prime_number">
+                        <td>23</td>
+                        <td>29</td>
+                        <td>31</td>
+                        <td>37</td>
+                        <td>41</td>
+                        <td>43</td>
+                        <td>47</td>
+                        <td>53</td>
+                    </tr>
+                    <tr class="_table-row-prime_number">
+                        <td>59</td>
+                        <td>61</td>
+                        <td>67</td>
+                        <td>71</td>
+                        <td>73</td>
+                        <td>79</td>
+                        <td>83</td>
+                        <td>89</td>
+                    </tr>
+                    <tr class="_table-row-prime_number">
+                        <td>97</td>
+                        <td>101</td>
+                        <td>103</td>
+                        <td>107</td>
+                        <td>109</td>
+                        <td>113</td>
+                        <td>127</td>
+                        <td>131</td>
+                    </tr>
+                    <tr class="_table-row-prime_number">
+                        <td>137</td>
+                        <td>139</td>
+                        <td>149</td>
+                        <td>151</td>
+                        <td>157</td>
+                        <td>163</td>
+                        <td>167</td>
+                        <td>173</td>
+                    </tr>
+                    <tr class="_table-row-prime_number">
+                        <td>179</td>
+                        <td>181</td>
+                        <td>191</td>
+                        <td>193</td>
+                        <td>197</td>
+                        <td>199</td>
+                        <td>211</td>
+                        <td>223</td>
+                    </tr>
+                    <tr class="_table-row-prime_number">
+                        <td>227</td>
+                        <td>229</td>
+                        <td>233</td>
+                        <td>239</td>
+                        <td>241</td>
+                        <td>251</td>
+                        <td>257</td>
+                        <td>263</td>
+                    </tr>
+                    <tr class="_table-row-prime_number">
+                        <td>269</td>
+                        <td>271</td>
+                        <td>277</td>
+                        <td>281</td>
+                        <td>283</td>
+                        <td>293</td>
+                        <td>307</td>
+                        <td>311</td>
+                    </tr>
+                    <tr class="_table-row-prime_number">
+                        <td>313</td>
+                        <td>317</td>
+                        <td>331</td>
+                        <td>337</td>
+                        <td>347</td>
+                        <td>349</td>
+                        <td>353</td>
+                        <td>359</td>
+                    </tr>
+                    <tr class="_table-row-prime_number">
+                        <td>367</td>
+                        <td>373</td>
+                        <td>379</td>
+                        <td>383</td>
+                        <td>389</td>
+                        <td>397</td>
+                        <td>401</td>
+                        <td>409</td>
+                    </tr>
+                    <tr class="_table-row-prime_number">
+                        <td>419</td>
+                        <td>421</td>
+                        <td>431</td>
+                        <td>433</td>
+                        <td>439</td>
+                        <td>443</td>
+                        <td>449</td>
+                        <td>457</td>
+                    </tr>
+                    <tr class="_table-row-prime_number">
+                        <td>461</td>
+                        <td>463</td>
+                        <td>467</td>
+                        <td>479</td>
+                        <td>487</td>
+                        <td>491</td>
+                        <td>499</td>
+                        <td>503</td>
+                    </tr>
+                    <tr class="_table-row-prime_number">
+                        <td>509</td>
+                        <td>521</td>
+                        <td>523</td>
+                        <td>541</td>
+                        <td>547</td>
+                        <td>557</td>
+                        <td>563</td>
+                        <td>569</td>
+                    </tr>
+                    <tr class="_table-row-prime_number">
+                        <td>571</td>
+                        <td>577</td>
+                        <td>587</td>
+                        <td>593</td>
+                        <td>599</td>
+                        <td>601</td>
+                        <td>607</td>
+                        <td>613</td>
+                    </tr>
+                    <tr class="_table-row-prime_number">
+                        <td>617</td>
+                        <td>619</td>
+                        <td>631</td>
+                        <td>641</td>
+                        <td>643</td>
+                        <td>647</td>
+                        <td>653</td>
+                        <td>659</td>
+                    </tr>
+                    <tr class="_table-row-prime_number">
+                        <td>661</td>
+                        <td>673</td>
+                        <td>677</td>
+                        <td>683</td>
+                        <td>691</td>
+                        <td>701</td>
+                        <td>709</td>
+                        <td>719</td>
+                    </tr>
+                    <tr class="_table-row-prime_number">
+                        <td>727</td>
+                        <td>733</td>
+                        <td>739</td>
+                        <td>743</td>
+                        <td>751</td>
+                        <td>757</td>
+                        <td>761</td>
+                        <td>769</td>
+                    </tr>
+                    <tr class="_table-row-prime_number">
+                        <td>773</td>
+                        <td>787</td>
+                        <td>797</td>
+                        <td>809</td>
+                        <td>811</td>
+                        <td>821</td>
+                        <td>823</td>
+                        <td>827</td>
+                    </tr>
+                    <tr class="_table-row-prime_number">
+                        <td>829</td>
+                        <td>839</td>
+                        <td>853</td>
+                        <td>857</td>
+                        <td>859</td>
+                        <td>863</td>
+                        <td>877</td>
+                        <td>881</td>
+                    </tr>
+                    <tr class="_table-row-prime_number">
+                        <td>883</td>
+                        <td>887</td>
+                        <td>907</td>
+                        <td>911</td>
+                        <td>919</td>
+                        <td>929</td>
+                        <td>937</td>
+                        <td>941</td>
+                    </tr>
+                    <tr class="_table-row-prime_number">
+                        <td>947</td>
+                        <td>953</td>
+                        <td>967</td>
+                        <td>971</td>
+                        <td>977</td>
+                        <td>983</td>
+                        <td>991</td>
+                        <td>997</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!--Footer-->
+            <div th:replace="~{fragments/footer :: footer}"></div>
+        </div>
+    </div>
+
+    <!--Scripts section-->
+    <div th:replace="~{fragments/scriptsfragment :: scripts(scriptLink = '/js/calc/numberTheory/primeFactors.js', langJsonPath = '/json/lang/calc/numberTheory/primeFactors.json')}"></div>
+</div>
+</body>
+</html>

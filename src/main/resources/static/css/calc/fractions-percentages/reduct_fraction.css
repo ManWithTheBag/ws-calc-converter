@@ -1,0 +1,32 @@
+/**/
+/*Image*/
+._img-position{
+    margin-top: 2rem;
+}
+._img-example{
+    display: block;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/**/
+/*Exception*/
+._text-result-exception{
+    color: #cb0a0a;
+}
+
+/**/
+/*Example*/
+._text-example-title{
+    margin: 0;
+}
+
+/**/
+/*Input*/
+._numeration-border{
+    border-bottom: thin solid black;
+}
+._denominator-border{
+    border-top: thin solid black;
+}

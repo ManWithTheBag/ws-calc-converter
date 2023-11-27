@@ -1,0 +1,40 @@
+{
+  "hcf": {
+    "en": "highest common factor",
+    "ua": "найбільший спільний дільник",
+    "ru": "наибольший общий делитель"
+  },
+  "hcf-definition": {
+    "en": "HCF or Highest Common Factor is the greatest number which divides each of the two or more numbers. HCF is also called the Greatest Common Measure (GCM) and Greatest Common Divisor(GCD)",
+    "ua": "Найбільшим загальним дільником (НОД) двох цілих чисел m і n називається найбільше число, яке m і n діляться без залишку.",
+    "ru": "Наибольшим общим делителем (НОД) двух целых чисел m и n называется наибольшее число, на которое m и n делятся без остатка."
+  },
+
+
+  "result": {
+    "en": "highest common factor = ",
+    "ua": "найбільший спільний дільник =",
+    "ru": "наибольший общий делитель ="
+  },
+
+  "example-title": {
+    "en": "find the HCF of numbers 450 and 390.",
+    "ua": "знайти НОД чисел 450 та 390.",
+    "ru": "найти НОД чисел 450 и 390."
+  },
+  "example-1": {
+    "en": "let's represent numbers as the product of their prime factors, for it use ",
+    "ua": "представимо числа як добуток їх простих множників, для цого використовуйте",
+    "ru": "представим числа как произведение их простых множителей, для этого используйте"
+  },
+  "example-2": {
+    "en": "we see that the common factors are 2, 3 and 5. then HCF(450, 390) = 2 · 3 · 5 = 30.",
+    "ua": "бачимо, що загальними є множники 2, 3 та 5. тоді НОД(450, 390) = 2 · 3 · 5 = 30.",
+    "ru": "видим, что общими являются множители 2, 3 и 5. тогда НОД(450, 390) = 2 · 3 · 5 = 30."
+  },
+  "link-prime-factors": {
+    "en": "factoring a number into prime factors",
+    "ua": "розкладання числа на прості множники",
+    "ru": "разложение числа на простые множители"
+  }
+}

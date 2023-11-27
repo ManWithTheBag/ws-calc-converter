@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<div th:replace="~{fragments/header.html :: header(title = 'Calculators', cssLick = '/css/calc-converterList.css')}"></div>
+<body>
+<div id="page-container">
+    <div id="content-wrap">
+
+        <!--  Navbar section-->
+        <div th:replace="~{fragments/navbar :: navbar}"></div>
+
+        <!--Content section-->
+        <div class="_content-position">
+            <div class="_text-align-center">
+                <samp class="_lang-calculators _uppercase-each-sentences _text-mainTitle">calculators</samp>
+            </div>
+
+            <!--numberTheory-->
+            <div>
+                <samp class="_lang-number_theory _uppercase-each-sentences _text-minorTitle">number theory</samp>
+                <div>
+                    <ul>
+                        <li>
+                            <a class="_lang-prime_factors _text-simple _text-link" href="/prime-factors" th:href="@{/prime-factors}">factoring a number into prime factors</a>
+                        </li>
+                        <li>
+                            <a class="_lang-hcf _text-simple _text-link" href="/hcf" th:href="@{/hcf}">highest common factor</a>
+                        </li>
+                        <li>
+                            <a class="_lang-lcm _text-simple _text-link" href="/lcm" th:href="@{/lcm}">least common multiple</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Fractions, Percentages-->
+            <div>
+                <samp class="_lang-fractions_percentages _uppercase-each-sentences _text-minorTitle">fractions, percentages</samp>
+                <div>
+                    <ul>
+                        <li>
+                            <a class="_lang-reduction_fraction _text-simple _text-link" href="/reduction-fraction" th:href="@{/reduction-fraction}">reducing arithmetic fractions</a>
+                        </li>
+                        <li>
+                            <a class="_lang-common_denominator _text-simple _text-link" href="/common-denominator" th:href="@{/common-denominator}">reducing fractions to a common denominator</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Roots, power, logarithms-->
+            <div>
+                <samp class="_lang-roots_power_logarithms _uppercase-each-sentences _text-minorTitle">roots, power, logarithms</samp>
+                <div>
+                    <ul>
+                        <li>
+                            <a class="_lang-power _text-simple _text-link" href="/power" th:href="@{/power}">raising a number to a power</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Trigonometry-->
+            <div>
+                <samp class="_lang-trigonometry _uppercase-each-sentences _text-minorTitle">trigonometry</samp>
+                <div>
+                    <ul>
+                        <li>
+                            <a class="_lang-trigonometry_functions _text-simple _text-link" href="/trigonometry" th:href="@{/trigonometry}">calculation of sine, cosine, tangent and cotangent</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div th:replace="~{fragments/footer :: footer}"></div>
+</div>
+</div>
+
+
+    <!--Scripts section-->
+    <div th:replace="~{fragments/scriptsfragment :: scripts(scriptLink = null, langJsonPath = '/json/lang/langCalculationsList.json')}"></div>
+</body>
+</html>

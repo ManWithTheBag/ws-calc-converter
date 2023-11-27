@@ -1,0 +1,61 @@
+._text-link{
+    margin-top: 2rem;
+    margin-right: 2rem;
+    color: #222831;
+}
+._text-link:hover{
+    text-decoration: none;
+    color: #3d4657;
+}
+
+._fraction-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+._flex-justify-center{
+    justify-content: center;
+}
+
+/**/
+/*Input*/
+._numeration-border{
+    border-bottom: thin solid black;
+}
+._denominator-border{
+    border-top: thin solid black;
+}
+
+/**/
+/*Text*/
+._text-bold{
+    font-weight: bold;
+}
+._text-answer-position{
+    margin-bottom: 10px;
+}
+
+/*!**!*/
+/*!*Fraction*!*/
+/*._frac-create {*/
+/*    display: inline-block;*/
+/*    position: relative;*/
+/*    vertical-align: middle;*/
+/*    letter-spacing: 0.001em;*/
+/*    text-align: center;*/
+/*}*/
+/*._frac-create > span {*/
+/*    display: block;*/
+/*    !*padding: 0.1em;*!*/
+/*    margin: 0;*/
+/*}*/
+/*._frac-create span.bottom {*/
+/*    border-top: medium solid black;*/
+/*}*/
+/*._frac-create span._none {*/
+/*    display: none;*/
+/*}*/
+
+/*._none{*/
+/*    display: none;*/
+/*}*/

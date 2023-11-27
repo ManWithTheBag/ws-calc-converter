@@ -1,0 +1,27 @@
+{
+  "placeholder-number-by-commas": {
+    "en": "Input numbers separated by commas",
+    "ua": "Вводьте числа через кому",
+    "ru": "Вводите числа через запятую"
+  },
+  "placeholder-number": {
+    "en": "Number",
+    "ua": "Число",
+    "ru": "Число"
+  },
+  "placeholder-numerator": {
+    "en": "Numer.",
+    "ua": "Чисел.",
+    "ru": "Числ."
+  },
+  "placeholder-denominator": {
+    "en": "Denom.",
+    "ua": "Знам.",
+    "ru": "Знам."
+  },
+  "placeholder-exponent": {
+    "en": "Exponent",
+    "ua": "Степень",
+    "ru": "Степень"
+  }
+}

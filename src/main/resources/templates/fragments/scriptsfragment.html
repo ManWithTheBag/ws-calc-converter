@@ -1,0 +1,16 @@
+<th:block th:fragment="scripts(scriptLink, langJsonPath)">
+
+  <script type="text/javascript" src="/js/lang/langMain.js"></script>
+  <script type="text/javascript" src="/js/main.js"></script>
+  <script type="text/javascript" src="/js/calc/calcCommonFunction.js"></script>
+
+
+  <th:block th:if="${scriptLink != null}">
+    <script type="text/javascript" th:src="${scriptLink}"></script>
+  </th:block>
+
+  <th:block th:if="${langJsonPath != null}">
+    <input id="langJSONPath" type="hidden" th:value="${langJsonPath}">
+    <script type="text/javascript" src="/js/lang/langFetchJSON.js"></script>
+  </th:block>
+</th:block>

@@ -1,0 +1,48 @@
+{
+  "lcm": {
+    "en": "least common multiple",
+    "ua": "найменше загальне кратне",
+    "ru": "наименьшее общее кратное"
+  },
+  "lcm-definition-1": {
+    "en": "the least common multiple (LCM) of two integers",
+    "ua": "найменшим загальним кратним (НОК) двох цілих чисел",
+    "ru": "наименьшим общим кратным (НОК) двух целых чисел"
+  },
+  "lcm-definition-2": {
+    "en": "and",
+    "ua": "і на",
+    "ru": "и на"
+  },
+  "lcm-definition-3": {
+    "en": "is the smallest natural number that is divisible by",
+    "ua": "називається найменше натуральне число, яке поділяється на",
+    "ru": "называется наименьшее натуральное число, которое делится на"
+  },
+
+  "example-title": {
+    "en": "find the HCF of numbers 450 and 390.",
+    "ua": "знайти НОД чисел 450 та 390.",
+    "ru": "найти НОД чисел 450 и 390."
+  },
+  "example-1": {
+    "en": "let's represent numbers as the product of their prime factors, for it use ",
+    "ua": "представимо числа як добуток їх простих множників, для цого використовуйте",
+    "ru": "представим числа как произведение их простых множителей, для этого используйте"
+  },
+  "example-2": {
+    "en": "we see that the common factors are 2, 3 and 5. then HCF(450, 390) = 2 · 3 · 5 = 30.",
+    "ua": "бачимо, що загальними є множники 2, 3 та 5. тоді НОД(450, 390) = 2 · 3 · 5 = 30.",
+    "ru": "видим, что общими являются множители 2, 3 и 5. тогда НОД(450, 390) = 2 · 3 · 5 = 30."
+  },
+  "link-prime-factors": {
+    "en": "factoring a number into prime factors",
+    "ua": "розкладання числа на прості множники",
+    "ru": "разложение числа на простые множители"
+  },
+  "example-3": {
+    "en": "knowing the HCF of these numbers, you can easily find their LCM. to do this, the product of numbers should be divided by their HCF:",
+    "ua": "знаючи НОД цих чисел, можна легко знайти їх НОК. для цього добуток чисел слід розділити на їх НОД:",
+    "ru": "зная НОД этих чисел, можно легко найти их НОК. Для этого произведение чисел следует разделить на их НОД:"
+  }
+}

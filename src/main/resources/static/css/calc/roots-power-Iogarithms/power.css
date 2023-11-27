@@ -1,0 +1,33 @@
+/**/
+/*Position*/
+._calc-form-position{
+    padding-top: 3.5rem;
+    padding-right: initial;
+    min-width: 40rem;
+}
+._calc-form-position-power{
+    padding-top: 3.5rem;
+}
+
+
+/**/
+/*Input*/
+._input-exponent{
+    margin-bottom: 4rem;
+}
+
+
+/**/
+/*Examples*/
+._examples-power{
+    position: relative;
+    top: -0.5em;
+    font-size: 80%;
+}
+
+._imag-example{
+    display: block;
+    margin: 1rem auto 1rem auto;
+}
+
+

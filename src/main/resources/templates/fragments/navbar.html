@@ -1,0 +1,31 @@
+<th:block th:fragment="navbar">
+    <header class="header" id="myHeader">
+        <nav class="_navbar-background _navbar-position">
+            <div class="_navbar-content-left">
+                <div>
+                    <a class="_navbar-font-link _navbar-text-brand " href="/" th:href="@{/}">Calc&Convert</a>
+                </div>
+                <div>
+                    <a class="_lang-nav-calculators _uppercase-each-sentences _navbar-font-link _navbar-text-link" href="/calculatorsList"
+                       th:href="@{/calculatorsList}">calculators</a>
+                </div>
+                <div>
+                    <a class="_lang-nav-converter _uppercase-each-sentences _navbar-font-link _navbar-text-link" href=""
+                       >converters</a>
+                </div>
+            </div>
+            <div class="_navbar-content-right">
+                <div class="_nav-lang-dropdown">
+                    <div>
+                        <img class="_navbar-icon _align-title-text" src="/img/icons/global_icon.png" alt="Language">
+                    </div>
+                    <div class="_nav-lang-dropdown-content">
+                        <a href="#" onclick="setNewLang('en')">English</a>
+                        <a href="#" onclick="setNewLang('ua')">Український</a>
+                        <a href="#" onclick="setNewLang('ru')">Русский</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+</th:block>

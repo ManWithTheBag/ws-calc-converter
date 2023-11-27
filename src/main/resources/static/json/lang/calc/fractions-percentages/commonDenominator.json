@@ -1,0 +1,73 @@
+{
+  "common_denominator": {
+    "en": "common denominator of fractions",
+    "ua": "спільний знаменник дробів",
+    "ru": "общий знаменатель дробей"
+  },
+  "common_denominator-definition": {
+    "en": "the calculator reduces several fractions to a common denominator. just enter the fractions and get a detailed solution and answer. you can enter two, three or more fractions. the numerators and denominators of fractions must be natural numbers.",
+    "ua": "калькулятор наводить декілька дробів до спільного знаменника. просто введіть дроби та отримайте докладне рішення та відповідь. можна вводити два, три дроби та більше. чисельники та знаменники дробів мають бути натуральними числами.",
+    "ru": "калькулятор приводит несколько дробей к общему знаменателю. просто введите дроби и получите подробное решение и ответ. можно вводить две, три дроби и более. числители и знаменатели дробей должны быть натуральными числами."
+  },
+
+
+  "result-task-1": {
+    "en": "task:",
+    "ua": "завдання:",
+    "ru": "задача:"
+  },
+  "result-task-2": {
+    "en": "reduce a fraction to a common denominator.",
+    "ua": "привести до спільного знаменника дробу.",
+    "ru": "привести к общему знаменателю дроби."
+  },
+
+
+  "solve-1": {
+    "en": "solve:",
+    "ua": "рішення:",
+    "ru": "решение:"
+  },
+  "solve-2": {
+    "en": "first, let's find the least common multiple of the denominators of the fractions. LCM(",
+    "ua": "спочатку знайдемо найменше загальне кратне знаменників дробів. НОК(",
+    "ru": "сначала найдём наименьшее общее кратное знаменателей дробей. НОК("
+  },
+  "solve-3": {
+    "en": ". this number will be the new denominator.",
+    "ua": ". це число і буде новим знаменником.",
+    "ru": ". это число и будет новым знаменателем."
+  },
+  "solve-4": {
+    "en": "to make the denominators of the fractions equal to",
+    "ua": "щоб знаменники дробів стали рівними",
+    "ru": "чтобы знаменатели дробей стали равными"
+  },
+  "solve-5": {
+    "en": ", you need:",
+    "ua": ", потрібно:",
+    "ru": ", надо:"
+  },
+  "solve-6": {
+    "en": "multiply the numerator and denominator of the ",
+    "ua": "множимо чисельник і знаменник ",
+    "ru": "умножаем числитель и знаменатель "
+  },
+  "solve-7": {
+    "en": "st fraction by ",
+    "ua": "-го дробу на ",
+    "ru": "-й дроби на "
+  },
+  "solve-8": {
+    "en": ". We get:",
+    "ua": ". Отримуємо:",
+    "ru": ". Плучаем:"
+  },
+
+
+  "answer": {
+    "en": "answer:",
+    "ua": "відповідь:",
+    "ru": "ответ:"
+  }
+}

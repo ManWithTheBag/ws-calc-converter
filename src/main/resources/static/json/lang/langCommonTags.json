@@ -1,0 +1,27 @@
+{
+  "example": {
+    "en": "example",
+    "ua": "приклад",
+    "ru": "пример"
+  },
+  "button-calc": {
+    "en": "calculate",
+    "ua": "розрахувати",
+    "ru": "вычислить"
+  },
+  "button-reset": {
+    "en": "reset",
+    "ua": "скинути",
+    "ru": "сбросить"
+  },
+  "button-add_fraction": {
+    "en": "add fraction",
+    "ua": "додати дріб",
+    "ru": "добавить дробь"
+  },
+  "button-subtract_fraction": {
+    "en": "subtract fraction",
+    "ua": "відняти дріб",
+    "ru": "вычесть дробь"
+  }
+}

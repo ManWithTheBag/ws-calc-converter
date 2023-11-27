@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<div th:replace="~{fragments/header :: header(title = 'Reduction Fractions', cssLick ='/css/calc/fractions-percentages/reduct_fraction.css')}"></div>
+
+<body>
+<!--For good footer position-->
+<div id="page-container">
+    <div id="content-wrap">
+
+        <!--  Navbar section-->
+        <div th:replace="~{fragments/navbar :: navbar}"></div>
+
+        <!--Content section-->
+        <div class="_content-position">
+            <!--Text section-->
+            <div>
+                <samp class="_uppercase-each-sentences _lang-reduct  _text-mainTitle">
+                    reducing arithmetic fraction</samp>
+                <br>
+                <br>
+                <samp class="_uppercase-each-sentences _lang-reduct-definition _text-simple">
+                    if the numerator and denominator of a fraction have a common divisor
+                    (that is, they are divided by the same number), then the numerator and denominator
+                    of the fraction can be divided by it. This operation is called fraction reduction.</samp>
+            </div>
+
+            <!--Calc form section-->
+            <div class="_new-section-position  _box-background-dark _border-dark">
+
+                <div class="_items-align-row-center">
+                    <!--Input section-->
+                    <div class="_items-column">
+                        <input id="input-numerator" class="_lang-placeholder-numerator _input-number _input-number-short _border-light _numeration-border" type="number"
+                               placeholder="Numer." step="1" min="0">
+                        <input id="input-denominator" class="_lang-placeholder-denominator _input-number _input-number-short _border-light _denominator-border"
+                               type="number" placeholder="Denom." step="1" min="0">
+                    </div>
+
+                    <!--Result section-->
+                    <div class="_items-align-row-center">
+                        <div>
+                            <samp class="_text-simple _item-margin-1rem-around">=</samp>
+                        </div>
+
+                        <div id="result-element">
+                            <div class="_items-align-row-center">
+                                <div class="_frac">
+                                    <span id="reduce-solve-num" class="_text-simple"></span>
+                                    <span class="symbol">/</span>
+                                    <span id="reduce-solve-denom" class="bottom _text-simple"></span>
+                                </div>
+                                <div>
+                                    <samp class="_text-simple _item-margin-1rem-around">=</samp>
+                                </div>
+                                <div class="_frac">
+                                    <span id="reduce-result-num" class="_text-simple"></span>
+                                    <span class="symbol">/</span>
+                                    <span id="reduce-result-denom" class="bottom _text-simple"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <samp id="reduce_exception" class="_text-simple _text-result-exception"></samp>
+                    </div>
+                </div>
+
+                <!--Button section-->
+                <div class="_items-align-row-center">
+                    <div>
+                        <button id="calc-button"
+                                class="_lang-button-calc _uppercase-each-sentences btn btn-secondary btn-lg _button-calc"
+                                onclick="calcButton()">calculate
+                        </button>
+                    </div>
+                    <div>
+                        <button id="reset-button"
+                                class="_lang-button-reset _uppercase-each-sentences btn btn-secondary btn-lg _button-reset"
+                                onclick="resetButton()">reset
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Examples section-->
+            <div class="_new-section-position _box-background-dark _border-dark">
+                <samp class="_lang-example _uppercase-each-sentences _text-mainTitle">examples</samp>
+                <br>
+                <div class="_img-position">
+                    <samp class="_lang-example-title _uppercase-each-sentences _text-minorTitle _text-example-title">let's
+                        reduce the fraction</samp>
+                    <img src="/img/calc/reduction_fraction/reduct_fraction-15_35.png" alt="15/35">
+                </div>
+                <br>
+                <div>
+                    <samp class="_uppercase-each-sentences _lang-example-solution-1 _text-simple">solution:</samp>
+                        <samp class="_lang-example-solution-2 _text-simple">the largest number that
+                            divides </samp><samp class="_text-simple"><strong> 15</strong></samp>
+                        <samp class="_lang-example-solution-3 _text-simple">and</samp>
+                        <samp class="_text-simple"><strong>35,</strong></samp>
+                        <samp class="_lang-example-solution-4">is</samp> <samp
+                                class="_text-simple"><strong>5</strong></samp>.
+                        <samp class="_uppercase-each-sentences _lang-example-solution-5 _text-simple">therefore, to
+                            reduce our fraction, we divide its numerator and denominator by</samp> <samp
+                                class="_text-simple"><strong>5.</strong></samp>
+                    </samp>
+                </div>
+
+                <img class="_img-example" src="/img/calc/reduction_fraction/example-reduction_function.png"
+                     alt="example of reduction fraction">
+
+            </div>
+            <br>
+        </div>
+
+        <!--Footer-->
+        <div th:replace="~{fragments/footer :: footer}"></div>
+    </div>
+</div>
+
+
+<!--Scripts section-->
+<div th:replace="~{fragments/scriptsfragment :: scripts(scriptLink = '/js/calc/fractions-percentages/reductionFractions.js', langJsonPath = '/json/lang/calc/fractions-percentages/langReductionFraction.json')}"></div>
+</body>
+</html>

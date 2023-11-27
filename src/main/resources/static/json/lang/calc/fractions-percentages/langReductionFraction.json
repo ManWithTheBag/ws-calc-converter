@@ -1,0 +1,42 @@
+{
+  "reduct": {
+    "en": "reducing arithmetic fraction",
+    "ua": "скорочення арифметичних дробів",
+    "ru": "сокращение арифметических дробей"
+  },
+  "reduct-definition": {
+    "en": "if the numerator and denominator of a fraction have a common divisor (that is, they are divided by the same number), then the numerator and denominator of the fraction can be divided by it. this operation is called fraction reduction.",
+    "ua": "якщо чисельник і знаменник дробу мають спільний дільник (тобто діляться на одне й те саме число), то чисельник і знаменник дробу можна поділити на нього. ця операція називається скороченням дробу.",
+    "ru": "если числитель и знаменатель дроби имеют общий делитель (то есть делятся на одно и то же число), то числитель и знаменатель дроби можно разделить на него. эта операция называется сокращением дроби."
+  },
+  "example-title": {
+    "en": "let's reduce the fraction",
+    "ua": "скоротимо дріб",
+    "ru": "сократим дробь"
+  },
+  "example-solution-1": {
+    "en": "solution:",
+    "ua": "рішення:",
+    "ru": "решение:"
+  },
+  "example-solution-2": {
+    "en": "the largest number that divides",
+    "ua": "найбільше число, на яке діляться",
+    "ru": "наибольшее число, на которое делятся"
+  },
+  "example-solution-3": {
+    "en": "and",
+    "ua": "і",
+    "ru": "и"
+  },
+  "example-solution-4": {
+    "en": "is",
+    "ua": "дорівнює",
+    "ru": "равно"
+  },
+  "example-solution-5": {
+    "en": "therefore, to reduce our fraction, we divide its numerator and denominator by",
+    "ua": "тому щоб скоротити наш дріб, поділимо його чисельник і знаменник на",
+    "ru": "поэтому чтобы сократить нашу дробь, поделим её числитель и знаменатель на"
+  }
+}

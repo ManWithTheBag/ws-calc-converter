@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<div th:replace="~{fragments/header :: header(title = 'HCF', cssLick = '/css/calc/numberTheory/hcf.css')}"></div>
+
+<body>
+<!--For good footer position-->
+<div id="page-container">
+    <div id="content-wrap">
+
+        <!--  Navbar section-->
+        <div th:replace="~{fragments/navbar :: navbar}"></div>
+
+        <div class="_content-position">
+            <!--Text section-->
+            <div>
+                <samp class="_uppercase-each-sentences _lang-hcf _text-mainTitle">highest common factor</samp>
+                <br>
+                <br>
+                <samp class="_lang-hcf-definition _text-simple">HCF or Highest Common Factor is the greatest number
+                    which divides each of the two or more numbers. HCF is also called the Greatest Common Measure (GCM)
+                    and Greatest Common Divisor(GCD)</samp>
+            </div>
+
+            <!--Calc form section-->
+            <div class=" _new-section-position _box-background-dark _border-dark">
+
+                <input id="input-number"
+                       class="_lang-placeholder-number-by-commas _input-number _input-number-long _border-light"
+                       type="text" placeholder="Input numbers separated by commas">
+
+                <!--Button section-->
+                <div class="_items-align-row-center">
+                    <div>
+                        <button id="calc-button"
+                                class="_lang-button-calc _uppercase-each-sentences btn btn-secondary btn-lg _button-calc"
+                                onclick="calcButton()">calculate
+                        </button>
+                    </div>
+                    <div>
+                        <button id="reset-button"
+                                class="_lang-button-reset _uppercase-each-sentences btn btn-secondary btn-lg _button-reset"
+                                onclick="resetButton()">reset
+                        </button>
+                    </div>
+                </div>
+
+                <!--Result section-->
+                <div class="_new-section-position _text-align-center _items-align-row-center">
+                    <samp id="result-title" class="_lang-result _uppercase-each-sentences _text-minorTitle">highest
+                        common factor =</samp><samp id="result" class="_text-minorTitle"></samp>
+                </div>
+            </div>
+
+            <!--Examples section-->
+            <div class="_new-section-position _box-background-dark _border-dark">
+                <samp class="_lang-example _uppercase-each-sentences _text-mainTitle">examples</samp>
+                <br>
+                <samp class="_lang-example-title _uppercase-each-sentences _text-minorTitle">find the HCF of numbers 450
+                    and 390.</samp>
+                <br>
+
+                <samp class="_lang-example-1 _uppercase-each-sentences _text-simple _item-margin-05rem-vertical ">let's
+                    represent numbers as the product of their prime factors, for it use </samp>
+                <a class="_lang-link-prime-factors _text-link _text-simple" href="/prime-factors">factoring a number into prime factors</a>
+
+                <div class="_text-align-center _items-column">
+                    <samp class="_text-simple ">450 = 2 · 3 · 3 · 5 · 5</samp>
+                    <samp class="_text-simple _item-margin-05rem-vertical">390 = 2 · 3 · 5 · 13</samp>
+                </div>
+                <samp class="_lang-example-2 _uppercase-each-sentences _text-simple _item-margin-05rem-vertical ">we see
+                    that the common factors are 2, 3 and 5. then HCF(450, 390) = 2 · 3 · 5 = 30.</samp>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div th:replace="~{fragments/footer :: footer}"></div>
+    </div>
+</div>
+
+
+<!--Scripts section-->
+<div th:replace="~{fragments/scriptsfragment :: scripts(scriptLink = '/js/calc/numberTheory/hcf.js', langJsonPath = '/json/lang/calc/numberTheory/hcf.json')}"></div>
+</body>
+</html>

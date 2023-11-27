@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<div th:replace="~{fragments/header :: header(title = 'Exponent', cssLick = '/css/calc/roots-power-Iogarithms/power.css')}"></div>
+
+<body>
+<!--For good footer position-->
+<div id="page-container">
+    <div id="content-wrap">
+
+        <!--  Navbar section-->
+        <div th:replace="~{fragments/navbar :: navbar}"></div>
+
+        <!--Content section-->
+        <div class="_content-position">
+            <!--Text section-->
+            <div>
+                <samp class="_uppercase-each-sentences _lang-power _text-mainTitle">raising a number to a power</samp>
+                <br>
+                <br>
+                <samp class="_uppercase-each-sentences _lang-power-definition _text-simple">this is an online calculator
+                    for exponents. calculate the power of large base integers and real numbers.</samp>
+            </div>
+
+            <!--Calc form section-->
+            <div class="_calc-form-position-power _new-section-position _box-background-dark _border-dark">
+
+                <div class="_items-align-row-center">
+                    <input id="input-number" class="_lang-placeholder-number _input-number _input-number-short _border-light" type="number" placeholder="Number"
+                           step="0.1">
+                    <input id="input-exponent" class="_lang-placeholder-exponent _input-number _input-number-short _border-light _input-exponent" type="number"
+                           placeholder="Exponent" step="0.1">
+
+                    <!--Result section-->
+                        <samp class="_text-simple _item-margin-1rem-around">=</samp>
+                        <samp id="calc-result" class="_text-simple "></samp>
+                </div>
+
+                <!--Button section-->
+                <div class="_items-align-row-center">
+                    <div>
+                        <button id="calc-button"
+                                class="_lang-button-calc _uppercase-each-sentences btn btn-secondary btn-lg _button-calc"
+                                onclick="calcButton()">calculate
+                        </button>
+                    </div>
+                    <div>
+                        <button id="reset-button"
+                                class="_lang-button-reset _uppercase-each-sentences btn btn-secondary btn-lg _button-reset"
+                                onclick="resetButton()">reset
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Text area plus-->
+            <div class="_new-section-position _text-simple _box-background-light _border-dark">
+                <samp class="_uppercase-each-sentences _lang-title-explanation-plus _text-minorTitle">what is a power of a
+                    number?</samp>
+                <br>
+                <div>
+                    <samp class="_uppercase-each-sentences _lang-text-explanation-plus-1 _text-simple">number</samp>
+                    <samp class="_text-simple"><strong> p </strong></samp>
+                    <samp class="_lang-text-explanation-plus-2 _text-simple">is called the</samp>
+                    <samp class="_text-simple"><strong>n</strong></samp>
+                    <samp class="_lang-text-explanation-plus-3 _text-simple">power of</samp>
+                    <samp class="_text-simple"><strong>a,</strong></samp>
+                    <samp class="_lang-text-explanation-plus-4 _text-simple">if</samp>
+                </div>
+
+                <img class="_imag-example" src="/img/calc/power/power-plus-explanation.png" alt="exponent">
+
+                <div>
+                    <samp class="_uppercase-each-sentences _lang-text-explanation-plus-5 _text-simple">that is, the number</samp>
+                    <samp class="_text-simple"><strong> p </strong></samp>
+                    <samp class="_lang-text-explanation-plus-6 _text-simple">is called the</samp>
+                    <samp class="_text-simple"><strong>a</strong></samp>
+                    <samp class="_lang-text-explanation-plus-7 _text-simple">multiplied by itself</samp>
+                    <samp class="_text-simple"><strong>n</strong></samp>
+                    <samp class="_lang-text-explanation-plus-8 _text-simple">times.</samp>
+                </div>
+                <div>
+                    <samp class="_uppercase-each-sentences _lang-text-explanation-plus-9 _text-simple">the number</samp>
+                    <samp class="_text-simple"><strong> n </strong></samp>
+                    <samp class="_lang-text-explanation-plus-10 _text-simple">is usually called the exponent, and the number</samp>
+                    <samp class="_text-simple"><strong>a</strong></samp>
+                    <samp class="_lang-text-explanation-plus-11 _text-simple">is the base.</samp>
+                </div>
+            </div>
+
+            <!--Examples section-->
+            <div class="_new-section-position _box-background-dark _border-dark">
+                <samp class="_lang-example _uppercase-each-sentences _text-mainTitle">example</samp>
+                <div class="_items-align-row-center">
+                    <samp class="_lang-example-title-plus _uppercase-each-sentences _text-minorTitle">Calculate powers</samp>
+                    <div class="_items-align-row-center _item-margin-1rem-around">
+                        <samp class="_text-minorTitle">2<samp class="_examples-power">5</samp></samp>
+                    </div>
+                </div>
+                <div>
+                    <samp class="_uppercase-each-sentences _lang-example-plus-1 _text-simple">solution:</samp>
+                        <samp class="_lang-example-plus-2 _text-simple">let's raise the number</samp>
+                        <samp class="_text-simple"><strong>2,</strong></samp>
+                        <samp class="_lang-example-plus-3 _text-simple">to the fifth power, that is, calculate the
+                            value of the expression</samp>
+                        <samp class="_text-simple"><strong> 2<samp class="_examples-power"><strong>5</strong></samp></strong></samp>.
+                        <samp class="_uppercase-each-sentences _lang-example-plus-4 _text-simple">by the definition given above,</samp>
+                    </samp>
+                </div>
+
+                <img class="_imag-example" src="/img/calc/power/power-plus-example.png" alt="example">
+
+            </div>
+            <br>
+
+            <!--Text area negative-->
+            <div class="_new-section-position _text-simple _box-background-light _border-dark">
+                <samp class="_uppercase-each-sentences _lang-title-explanation-negative _text-minorTitle">negative exponent</samp>
+                <br>
+                <div>
+                    <samp class="_uppercase-each-sentences _lang-text-explanation-negative-1 _text-simple">exponents can be not only positive, but also negative</samp>
+                    <samp class="_text-simple">.</samp>
+                </div>
+
+                <img class="_imag-example" src="/img/calc/power/power-explanation-negative.png" alt="example-negative">
+
+                <div>
+                    <samp class="_uppercase-each-sentences _lang-example _text-minorTitle">example</samp>
+                </div>
+
+                <img class="_imag-example" src="/img/calc/power/power-example-negative.png" alt="example-negative">
+            </div>
+
+        </div>
+        <!--Footer-->
+        <div th:replace="~{fragments/footer :: footer}"></div>
+    </div>
+</div>
+
+
+<!--Scripts section-->
+<div th:replace="~{fragments/scriptsfragment :: scripts(scriptLink = '/js/calc/roots-power-Iogarithms/power.js', langJsonPath = '/json/lang/calc/roots-power-Iogarithms/langPower.json')}"></div>
+</body>
+</html>

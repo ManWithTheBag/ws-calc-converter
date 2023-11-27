@@ -1,0 +1,91 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #F9F7F7;
+}
+
+/**/
+/*Header fixed on top viewport*/
+._sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+/**/
+
+
+/**/
+/*Setup text case*/
+._uppercase-each-sentences{}
+/**/
+
+
+/**/
+/*Items positions*/
+._content-position{
+    margin: 1rem 20rem 0rem 1rem ;
+}
+
+._items-align-row-center{
+    display: flex;
+    align-items: center;
+}
+._items-column{
+    display: flex;
+    flex-direction: column;
+}
+._item-align-center{
+    margin-left: auto;
+    margin-right: auto;
+}
+._text-align-center{
+    text-align: center;
+}
+
+._item-margin-1rem-around{
+    margin: 1rem;
+}
+._item-margin-05rem-vertical{
+    margin: 0.5rem 0 0.5rem 0;
+}
+._item-margin-05rem-horizon{
+    margin: 0 0.5rem 0 0.5rem;
+}
+/**/
+
+
+/**/
+/*Font size*/
+._text-mainTitle{
+    font-family: 'Wix Madefor Text', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+._text-minorTitle{
+    font-family: 'Wix Madefor Text', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-top: 1rem;
+}
+._text-simple{
+    font-family: 'Wix Madefor Text', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+strong{
+    font-weight:bold;
+}
+/**/
+
+
+/**/
+/*Link*/
+._text-link{
+    color: #222831;
+}
+._text-link:hover{
+    text-decoration: none;
+    color: #3d4657;
+}

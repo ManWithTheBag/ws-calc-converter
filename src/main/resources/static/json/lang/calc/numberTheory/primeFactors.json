@@ -1,0 +1,83 @@
+{
+  "prime_factor": {
+    "en": "factoring a number into prime factors",
+    "ua": "розкладання числа на прості множники",
+    "ru": "разложение числа на простые множители"
+  },
+  "prime_factor-definition": {
+    "en": "any natural number n > 1 can be represented as a product of prime numbers. this representation is called the factorization of n\n                    into prime factors.",
+    "ua": "будь-яке натуральне число n > 1 можна предствити як набір простих чисел. цеprime_factor-definition називається розкладанням числа n на прості множники.",
+    "ru": "любое натуральное число n > 1 можно представить в виде произведения простых чисел. это представление называется разложением числа n на простые множители."
+  },
+
+
+  "explanation-title": {
+    "en": "algorithm for factoring numbers into prime factors:",
+    "ua": "алгоритм розкладання чисел на прості множники:",
+    "ru": "алгоритм разложения чисел на простые множители:"
+  },
+  "explanation-1": {
+    "en": "draw a vertical line.",
+    "ua": "намалюйте вертикальну лінію.",
+    "ru": "нарисуйте вертикальную линию."
+  },
+  "explanation-2": {
+    "en": "to the left of the line we write the number.",
+    "ua": "ліворуч від риси пишемо число.",
+    "ru": "слева от черты пишем число."
+  },
+  "explanation-3": {
+    "en": "to the right of the line we write the prime divisor of this number.",
+    "ua": "праворуч від риси пишемо простий дільник цього числа.",
+    "ru": "справа от черты пишем простой делитель этого числа."
+  },
+  "explanation-4": {
+    "en": "on the left we write the number that was formed as a result of division.",
+    "ua": "зліва записуємо число, яке утворилося в результаті поділу.",
+    "ru": "слева записываем число которое образовалось в результате деления."
+  },
+  "explanation-5": {
+    "en": "continue the process until there is 1 left on the left.",
+    "ua": "продовжуємо процес доки зліва не залишиться 1.",
+    "ru": "продолжаем процесс пока слева не останется 1."
+  },
+
+
+  "example-title": {
+    "en": "factor the number",
+    "ua": "розкласти на множники число",
+    "ru": "разложить на множители число."
+  },
+  "example-1": {
+    "en": "draw a line and write 36 on the left. the smallest prime divisor of 36 is 2. divide",
+    "ua": "проводимо лінію та пишемо зліва 36. найменший простий дільник числа 36 дорівнює 2. ділимо",
+    "ru": "проводим линию и пишем слева 36. наименьший простой делитель числа 36 равен 2. делим"
+  },
+  "example-2": {
+    "en": "write it under the number",
+    "ua": "записуємо під числом",
+    "ru": "записываем под числом"
+  },
+  "example-3": {
+    "en": "the smallest divisor of 18 is 2. divide",
+    "ua": "найменший дільник числа 18 дорівнює 2. ділимо",
+    "ru": "наименьший делитель 18 равен 2. делим"
+  },
+  "example-4": {
+    "en": "the smallest divisor of 9 is 3. divide",
+    "ua": "найменший дільник числа 9 дорівнює 3. ділимо",
+    "ru": "наименьший делитель 9 равен 3. делим"
+  },
+  "example-5": {
+    "en": "3 is a prime number that can only be divided by 3 and 1. we write 3 opposite the three. divide",
+    "ua": "3 це просте число у якого ділити лише 3 та 1. записуємо 3 навпроти трійки. ділимо",
+    "ru": "3 это простое число у которого делить только 3 и 1. записываем 3 напротив тройки. делим"
+  },
+
+
+  "prime_numbers-table": {
+    "en": "table of prime numbers up to 1000",
+    "ua": "таблиця простих чисел до 1000",
+    "ru": "таблица простых чисел до 1000"
+  }
+}

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<div th:replace="~{fragments/header :: header(title = 'Common denominator', cssLick = '/css/calc/fractions-percentages/commonDenominator.css')}"></div>
+
+<body>
+<!--For good footer position-->
+<div id="page-container">
+    <div id="content-wrap">
+
+        <!--  Navbar section-->
+        <div th:replace="~{fragments/navbar :: navbar}"></div>
+
+        <!--Content section-->
+        <div class="_content-position">
+            <!--Text section-->
+            <div>
+                <samp class="_uppercase-each-sentences _lang-common_denominator _text-mainTitle">common denominator of
+                    fractions</samp>
+                <br>
+                <br>
+                <samp class="_uppercase-each-sentences _lang-common_denominator-definition _text-simple">the calculator
+                    reduces several fractions to a common denominator. just enter the fractions and get a detailed
+                    solution and answer. you can enter two, three or more fractions. the numerators and denominators of
+                    fractions must be natural numbers</samp>
+            </div>
+
+            <!--Calc form section-->
+            <div class=" _new-section-position _box-background-dark _border-dark">
+
+                <div id="input-section" class="_fraction-list">
+                    <!--Input section-->
+                    <div class="_main-fraction _items-align-row-center _item-margin-05rem-vertical">
+                        <div class="_items-column">
+                            <input class="_lang-placeholder-numerator _input-number _input-number-short _border-light _numeration-border _js-numerator"
+                                   type="number" placeholder="Numer." step="1">
+                            <input class="_lang-placeholder-denominator _input-number _input-number-short _border-light _denominator-border _js-denominator"
+                                   type="number" placeholder="Denom." step="1">
+                        </div>
+
+                        <samp class="_text-simple _item-margin-1rem-around">,</samp>
+                    </div>
+                    <div class="_main-fraction _items-align-row-center _item-margin-05rem-vertical">
+                        <div class="_items-column">
+
+                            <input class="_lang-placeholder-numerator _input-number _input-number-short _border-light _numeration-border _js-numerator"
+                                   type="number"
+                                   placeholder="Numer." step="1">
+                            <input class="_lang-placeholder-denominator _input-number _input-number-short _border-light _denominator-bord _js-denominator"
+                                   type="number" placeholder="Denom." step="1">
+                        </div>
+
+                        <samp class="_text-simple _item-margin-1rem-around">,</samp>
+                    </div>
+                </div>
+
+                <!--Button section-->
+                <div class="_items-align-row-center">
+                    <div>
+                        <button id="add-item"
+                                class="_lang-button-add_fraction _uppercase-each-sentences btn btn-secondary btn-sm _button-small"
+                                onclick="addFraction()">add fraction
+                        </button>
+                    </div>
+                    <div>
+                        <button id="subtract-item"
+                                class="_lang-button-subtract_fraction _uppercase-each-sentences btn btn-secondary btn-sm _button-small"
+                                onclick="subtractFraction()">subtract fraction
+                        </button>
+                    </div>
+                </div>
+
+                <div class="_items-align-row-center">
+                    <div>
+                        <button id="calc-button"
+                                class="_lang-button-calc _uppercase-each-sentences btn btn-secondary btn-lg _button-calc"
+                                onclick="calcButton()">calculate
+                        </button>
+                    </div>
+                    <div>
+                        <button id="reset-button"
+                                class="_lang-button-reset _uppercase-each-sentences btn btn-secondary btn-lg _button-reset"
+                                onclick="resetButton()">reset
+                        </button>
+                    </div>
+                </div>
+
+                <!--Exception massage-->
+                <div class="_new-section-position _text-align-center">
+                    <samp id="exception-massage" class="_text-minorTitle"></samp>
+                </div>
+
+                <!--Result section-->
+                <div id="result-div" class="_new-section-position">
+
+                    <!--Task-->
+                    <div>
+                        <samp class="_lang-result-task-1 _uppercase-each-sentences _text-minorTitle">task:</samp>
+                        <br>
+                        <samp class="_lang-result-task-2 _uppercase-each-sentences _text-simple">reduce a
+                            fraction to a common denominator</samp>
+
+                        <div id="result-task-fract-div" class="_fraction-list _flex-justify-center">
+
+                        </div>
+
+
+                        <!--Solution-->
+                        <samp class="_lang-solve-1 _uppercase-each-sentences _text-minorTitle">solve:</samp>
+                        <br>
+                        <samp class="_lang-solve-2 _uppercase-each-sentences _text-simple">first, let's find the least
+                            common multiple of the denominators of the fractions. LCM(</samp>
+
+                        <samp id="solve-denominator" class="_text-simple"></samp>
+
+                        <samp class="_text-simple">) =</samp>
+
+                        <samp class="_solve-lcm _text-simple"></samp>
+
+                        <samp class="_lang-solve-3 _uppercase-each-sentences _text-simple">. this number will be the new
+                            denominator.</samp>
+                        <samp class="_lang-solve-4 _uppercase-each-sentences _text-simple">to make the denominators of
+                            the fractions equal to</samp>
+                        <samp class="_solve-lcm _text-simple"></samp>
+                        <samp class="_lang-solve-5 _text-simple">, you need:</samp>
+
+                        <ul id="solve-ul" class="_new-section-position">
+
+                        </ul>
+
+                        <!--Answer-->
+                        <div class="_items-align-row-center">
+                            <div class="_text-answer-position">
+                                <samp class="_lang-answer _uppercase-each-sentences _text-minorTitle _text-bold">answer:</samp>
+                            </div>
+
+                            <div id="answer-div" class="_fraction-list _item-margin-1rem-around">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Examples section-->
+            <div class="_new-section-position _box-background-dark _border-dark">
+                <samp class="_lang-example _uppercase-each-sentences _text-mainTitle">examples</samp>
+                <div>
+                    <samp class="_lang-result-task-2 _uppercase-each-sentences _text-simple">reduce a
+                        fraction to a common denominator</samp>
+
+                    <div class="_fraction-list _flex-justify-center">
+
+                        <div class="_items-align-row-center">
+                            <div class="_frac _item-margin-05rem-horizon">
+                                <span class="_text-simple">2</span>
+                                <span class="symbol">/</span>
+                                <span class="bottom _text-simple">3</span>
+                            </div>
+
+                            <samp class="_text-simple _item-margin-05rem-horizon">,</samp>
+                        </div>
+
+                        <div class="_items-align-row-center">
+                            <div class="_frac _item-margin-05rem-horizon">
+                                <span class="_text-simple">5</span>
+                                <span class="symbol">/</span>
+                                <span class="bottom _text-simple">6</span>
+                            </div>
+
+                            <samp class="_text-simple _item-margin-05rem-horizon">,</samp>
+                        </div>
+
+                        <div class="_items-align-row-center">
+                            <div class="_frac _item-margin-05rem-horizon">
+                                <span class="_text-simple">1</span>
+                                <span class="symbol">/</span>
+                                <span class="bottom _text-simple">4</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <samp class="_lang-solve-1 _uppercase-each-sentences _text-minorTitle">solve:</samp>
+                    <br>
+                    <samp class="_lang-solve-2 _uppercase-each-sentences _text-simple">first, let's find the least
+                        common multiple of the denominators of the fractions. LCM(</samp>
+
+                    <samp class="_text-simple">3, 6, 4</samp>
+
+                    <samp class="_text-simple">) =</samp>
+
+                    <samp class="_solve-lcm _text-simple">12</samp>
+
+                    <samp class="_lang-solve-3 _uppercase-each-sentences _text-simple">. this number will be the new
+                        denominator.</samp>
+                    <samp class="_lang-solve-4 _uppercase-each-sentences _text-simple">to make the denominators of the
+                        fractions equal to</samp>
+                    <samp class="_solve-lcm _text-simple">12</samp>
+                    <samp class="_lang-solve-5 _text-simple">, you need:</samp>
+
+                    <ul class="_item-margin-05rem-vertical">
+                        <li>
+                            <samp class="_lang-solve-6 _uppercase-each-sentences _text-simple">multiply the numerator
+                                and denominator of the</samp>
+                            <samp class="_text-simple">1</samp>
+                            <samp class="_lang-solve-7 _text-simple">st fraction by</samp>
+                            <samp class="_text-simple">4</samp>
+                            <samp class="_lang-solve-8 _uppercase-each-sentences _text-simple">. we get:</samp>
+
+                            <div class="_fraction-list _flex-justify-center _item-margin-05rem-vertical">
+                                <div class="_frac _item-margin-05rem-horizon">
+                                    <span class="_text-simple">2</span>
+                                    <span class="symbol">/</span>
+                                    <span class="bottom _text-simple">3</span>
+                                </div>
+
+                                <samp class="_text-simple _item-margin-05rem-horizon">=</samp>
+
+                                <div class="_frac _item-margin-05rem-horizon">
+                                    <span class="_text-simple">2 ⋅ 4</span>
+                                    <span class="symbol">/</span>
+                                    <span class="bottom _text-simple">3 ⋅ 4</span>
+                                </div>
+
+                                <samp class="_text-simple _item-margin-05rem-horizon">=</samp>
+
+                                <div class="_frac _item-margin-05rem-horizon">
+                                    <span class="_text-simple">8</span>
+                                    <span class="symbol">/</span>
+                                    <span class="bottom _text-simple">12</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <samp class="_lang-solve-6 _uppercase-each-sentences _text-simple">multiply the numerator
+                                and denominator of the</samp>
+                            <samp class="_text-simple">2</samp>
+                            <samp class="_lang-solve-7 _text-simple">st fraction by</samp>
+                            <samp class="_text-simple">2</samp>
+                            <samp class="_lang-solve-8 _uppercase-each-sentences _text-simple">. we get:</samp>
+
+                            <div class="_fraction-list _flex-justify-center _item-margin-05rem-vertical">
+                                <div class="_frac _item-margin-05rem-horizon">
+                                    <span class="_text-simple">5</span>
+                                    <span class="symbol">/</span>
+                                    <span class="bottom _text-simple">6</span>
+                                </div>
+
+                                <samp class="_text-simple _item-margin-05rem-horizon">=</samp>
+
+                                <div class="_frac _item-margin-05rem-horizon">
+                                    <span class="_text-simple">5 ⋅ 2</span>
+                                    <span class="symbol">/</span>
+                                    <span class="bottom _text-simple">6 ⋅ 2</span>
+                                </div>
+
+                                <samp class="_text-simple _item-margin-05rem-horizon">=</samp>
+
+                                <div class="_frac _item-margin-05rem-horizon">
+                                    <span class="_text-simple">10</span>
+                                    <span class="symbol">/</span>
+                                    <span class="bottom _text-simple">12</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <samp class="_lang-solve-6 _uppercase-each-sentences _text-simple">multiply the numerator
+                                and denominator of the</samp>
+                            <samp class="_text-simple">3</samp>
+                            <samp class="_lang-solve-7 _text-simple">st fraction by</samp>
+                            <samp class="_text-simple">3</samp>
+                            <samp class="_lang-solve-8 _uppercase-each-sentences _text-simple">. we get:</samp>
+
+                            <div class="_fraction-list _flex-justify-center _item-margin-05rem-vertical">
+                                <div class="_frac _item-margin-05rem-horizon">
+                                    <span class="_text-simple">1</span>
+                                    <span class="symbol">/</span>
+                                    <span class="bottom _text-simple">4</span>
+                                </div>
+
+                                <samp class="_text-simple _item-margin-05rem-horizon">=</samp>
+
+                                <div class="_frac _item-margin-05rem-horizon">
+                                    <span class="_text-simple">1 ⋅ 3</span>
+                                    <span class="symbol">/</span>
+                                    <span class="bottom _text-simple">4 ⋅ 3</span>
+                                </div>
+
+                                <samp class="_text-simple _item-margin-05rem-horizon">=</samp>
+
+                                <div class="_frac _item-margin-05rem-horizon">
+                                    <span class="_text-simple">3</span>
+                                    <span class="symbol">/</span>
+                                    <span class="bottom _text-simple">12</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="_items-align-row-center">
+                        <div class="_text-answer-position">
+                            <samp class="_lang-answer _uppercase-each-sentences _text-minorTitle _text-bold">answer:</samp>
+                        </div>
+
+                        <div class="_items-align-row-center _item-margin-1rem-around">
+                            <div class="_frac _item-margin-05rem-horizon">
+                                <span class="_text-simple">8</span>
+                                <span class="symbol">/</span>
+                                <span class="bottom _text-simple">12</span>
+                            </div>
+
+                            <samp class="_text-simple _item-margin-05rem-horizon">,</samp>
+
+                            <div class="_frac _item-margin-05rem-horizon">
+                                <span class="_text-simple">10</span>
+                                <span class="symbol">/</span>
+                                <span class="bottom _text-simple">12</span>
+                            </div>
+
+                            <samp class="_text-simple _item-margin-05rem-horizon">,</samp>
+
+                            <div class="_frac _item-margin-05rem-horizon">
+                                <span class="_text-simple">3</span>
+                                <span class="symbol">/</span>
+                                <span class="bottom _text-simple">12</span>
+                            </div>
+
+                            <samp class="_text-simple _item-margin-05rem-horizon">.</samp>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <!--Footer-->
+        <div th:replace="~{fragments/footer :: footer}"></div>
+    </div>
+</div>
+
+
+<!--Scripts section-->
+<div th:replace="~{fragments/scriptsfragment :: scripts(scriptLink = '/js/calc/fractions-percentages/commonDenominator.js', langJsonPath = '/json/lang/calc/fractions-percentages/commonDenominator.json')}"></div>
+</body>
+</html>

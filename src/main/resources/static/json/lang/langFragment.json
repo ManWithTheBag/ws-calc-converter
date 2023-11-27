@@ -1,0 +1,27 @@
+{
+  "nav-calculators": {
+    "en": "calculators",
+    "ua": "калькулятор",
+    "ru": "калькулятор"
+  },
+  "nav-converter": {
+    "en": "converters",
+    "ua": "конвертер",
+    "ru": "конвертер"
+  },
+  "footer-disclaimer": {
+    "en": "disclaimer ",
+    "ua": "відмова від відповідальності",
+    "ru": "отказ от ответственности"
+  },
+  "footer-privacy": {
+    "en": "privacy policy",
+    "ua": "політика конфіденційності",
+    "ru": "политика конфиденциальности"
+  },
+  "footer-terms": {
+    "en": "terms & conditions",
+    "ua": "умови використання",
+    "ru": "условия использования"
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<div th:replace="~{fragments/header :: header(title = 'TITLE FOR THIS PAGE', cssLick = 'SRC OF CSS FOR THIS PAGE')}"></div>
+
+<body>
+<!--For good footer position-->
+<div id="page-container">
+    <div id="content-wrap">
+
+        <!--  Navbar section-->
+        <div th:replace="~{fragments/navbar :: navbar}"></div>
+
+        <!--Content section-->
+        <div class="_content-position">
+            <!--Text section-->
+            <div>
+                <samp class="_uppercase-each-sentences _lang-prime_factor _text-mainTitle"></samp>
+                <br>
+                <br>
+                <samp class="_uppercase-each-sentences _lang-prime_factor-definition _text-simple"></samp>
+            </div>
+
+            <!--Calc form section-->
+            <div class=" _new-section-position _box-background-dark _border-dark">
+
+                <!--                <input id="input-number" class="_lang-placeholder-number _input-number _input-number-long _border-light"-->
+                <!--                       type="number"-->
+                <!--                       step="1" placeholder="Number">-->
+
+                <!--Button section-->
+                <div class="_items-align-row-center">
+                    <div>
+                        <button id="calc-button"
+                                class="_lang-button-calc _uppercase-each-sentences btn btn-secondary btn-lg _button-calc"
+                                onclick="calcButton()">calculate
+                        </button>
+                    </div>
+                    <div>
+                        <button id="reset-button"
+                                class="_lang-button-reset _uppercase-each-sentences btn btn-secondary btn-lg _button-reset"
+                                onclick="resetButton()">reset
+                        </button>
+                    </div>
+                </div>
+
+                <!--Result section-->
+                <div class="_new-section-position _text-align-center">
+                    <samp id="result-exception" class="_text-simple "></samp>
+
+                    <table id="result-table-body" class="_item-align-center">
+
+                    </table>
+                </div>
+            </div>
+
+            <!--Text area-->
+            <div class="_new-section-position _text-simple _box-background-light _border-dark">
+                <samp class="_uppercase-each-sentences _lang-explanation-title _text-minorTitle"></samp>
+                <samp class="_uppercase-each-sentences _lang-explanation-1 _text-simple _item-margin-05rem-vertical"></samp>
+            </div>
+
+            <!--Examples section-->
+            <div class="_new-section-position _box-background-dark _border-dark">
+                <samp class="_lang-example _uppercase-each-sentences _text-mainTitle">examples</samp>
+                <br>
+                <div class="_items-align-row-center">
+                    <samp class="_lang-example-title _uppercase-each-sentences _text-minorTitle"></samp>
+                    <samp class="_text-minorTitle _item-margin-05rem-horizon"></samp>
+                </div>
+
+                <div class="">
+                    <samp class="_lang-example-1 _uppercase-each-sentences _text-simple"></samp>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div th:replace="~{fragments/footer :: footer}"></div>
+    </div>
+</div>
+
+
+<!--Scripts section-->
+<div th:replace="~{fragments/scriptsfragment :: scripts(scriptLink = 'SRC OF SCRIPT FOR THIS PAGE', langJsonPath = 'SRC OF JSON FOR LANGUAGE IN THIS PAGE')}"></div>
+</body>
+</html>

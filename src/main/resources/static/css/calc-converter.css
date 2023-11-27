@@ -1,0 +1,129 @@
+/**/
+/*Positions*/
+._new-section-position{
+    margin-top: 3rem;
+}
+
+
+
+/**/
+/*Buttons*/
+._button-calc{
+    margin-top: 2rem;
+    margin-right: 2rem;
+    font-size: 2rem;
+    background-color: #0F2C59;
+}
+._button-calc:hover{
+    background-color: #234f91;
+}
+._button-reset{
+    margin-top: 2rem;
+    font-size: 2rem;
+    margin-right: 2rem;
+}
+._button-small{
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    margin-right: 2rem;
+}
+
+
+/**/
+/*Selector*/
+._form-select-position{
+    margin-right: 0.8rem;
+}
+.form-select{
+    font-size: 2rem;
+}
+.form-select:valid:focus {
+    box-shadow: none;
+    border: 3px solid #0F2C59;
+}
+
+
+/**/
+/*Inputs*/
+._input-number-long{
+    width: 100%;
+}
+._input-number-short{
+    width: 7rem;
+}
+._input-number{
+    text-align: left;
+    border-radius: 2px;
+    padding-left: 1rem;
+    font-size: 1.8rem;
+    line-height: 0.5;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+._input-number::placeholder{
+    text-align: left;
+    font-family: 'Wix Madefor Text', sans-serif;
+    font-weight: 300;
+    /*padding-left: 0.2rem;*/
+    font-size: 1.1rem;
+    line-height: 0.5;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+._border-light{
+    border: 3px solid #efeded;
+}
+._border-dark{
+    border: 3px solid #c0bebe;
+}
+._input-radio-form-position{
+    margin-bottom: 1rem;
+}
+._input-ratio-position{
+    margin-left: 0.5rem;
+}
+._input-radio{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 2.2rem;
+    margin-right: 0.1rem;
+}
+
+/**/
+/*Box*/
+._box-background-dark{
+    background-color: #efeded;
+    border-radius: 3px;
+    padding: 1rem;
+}
+._box-background-light{
+    /*background-color: #efeded;*/
+    border-radius: 3px;
+    padding: 1rem;
+}
+
+
+/**/
+/*Fraction*/
+._frac {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;
+}
+._frac > span {
+    display: block;
+    /*padding: 0.1em;*/
+    margin: 0;
+}
+._frac span.bottom {
+    border-top: medium solid black;
+}
+._frac span.symbol {
+    display: none;
+}
+
+
+
+

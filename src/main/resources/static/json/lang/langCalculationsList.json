@@ -1,0 +1,74 @@
+{
+  "calculators": {
+    "en": "calculators",
+    "ua": "калькулятор",
+    "ru": "калькулятор"
+  },
+
+
+  "number_theory": {
+    "en": "number theory",
+    "ua": "теорія чисел",
+    "ru": "теория чисел"
+  },
+  "prime_factors": {
+    "en": "factoring a number into prime factors",
+    "ua": "розкладання числа на прості множники",
+    "ru": "разложение числа на простые множители"
+  },
+  "hcf": {
+    "en": "highest common factor",
+    "ua": "найбільший спільний дільник",
+    "ru": "наибольший общий делитель"
+  },
+  "lcm": {
+    "en": "least common multiple",
+    "ua": "найменше загальне кратне",
+    "ru": "наименьшее общее кратное"
+  },
+
+
+  "fractions_percentages": {
+    "en": "fractions, percentages",
+    "ua": "дроби, відсотки",
+    "ru": "дроби, проценты"
+  },
+  "reduction_fraction": {
+    "en": "reducing arithmetic fractions",
+    "ua": "скорочення арифметичних дробів",
+    "ru": "сокращение арифметических дробей"
+  },
+  "common_denominator": {
+    "en": "common denominator of fractions",
+    "ua": "спільний знаменник дробів",
+    "ru": "общий знаменатель дробей"
+  },
+
+
+
+  "roots_power_logarithms": {
+    "en": "roots, degree, logarithms",
+    "ua": "коріння, ступеня, логарифми",
+    "ru": "корни, степени, логарифмы"
+  },
+  "power": {
+    "en": "raising a number to a power",
+    "ua": "зведення числа до ступеня",
+    "ru": "возведение числа в степень"
+  },
+
+
+
+  "trigonometry": {
+    "en": "trigonometry",
+    "ua": "тригонометрія",
+    "ru": "тригонометрия"
+  },
+  "trigonometry_functions": {
+    "en": "calculation of sine, cosine, tangent and cotangent",
+    "ua": "обчислення синуса, косинуса, тангенса і котангенса",
+    "ru": "расчет синуса, косинуса, тангенса и котангенса"
+  }
+}
+
+

@@ -1,0 +1,30 @@
+/**/
+/*Table*/
+._trig-table{
+    margin-top: 1rem;
+    max-width: 45rem;
+}
+._trig-table, tr, td {
+    width: 100%;
+    min-width: 5rem;
+    border: 1px solid #252B48;
+    padding: 0.8rem 0.5rem 0.8rem 0.5rem;
+    font-size: 1rem;
+    font-family: 'Wix Madefor Text', sans-serif;
+}
+
+/**/
+/*Text*/
+._text-breaks{
+    font-size: 2.4rem;
+}
+
+/**/
+/*Images*/
+._img-triangeln{
+    height: 18rem;
+}
+._img-function{
+    height: 20rem;
+    margin-left: 2rem;
+}

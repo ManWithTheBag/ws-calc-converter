@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<div th:replace="~{fragments/header :: header(title = 'Calculators', cssLick = '/css/calc/trigonometry/trigonometry.css')}"></div>
+
+<body>
+<div id="page-container">
+    <div id="content-wrap">
+
+        <!--  Navbar section-->
+        <div th:replace="~{fragments/navbar :: navbar}"></div>
+
+        <!--Content section-->
+        <div class="_content-position">
+            <!--Text section-->
+            <div>
+                <samp class="_uppercase-each-sentences _lang-trig-func  _text-mainTitle">
+                    trigonometric functions</samp>
+                <br>
+                <br>
+                <span class="_uppercase-each-sentences _lang-trig-definition _text-simple">
+                    in mathematics, the trigonometric functions are real functions which relate
+                        an angle of a right-angled triangle to ratios of two side lengths. the
+                        trigonometric functions most widely used in modern mathematics are the sine, the cosine, and the tangent.
+                </span>
+            </div>
+            <br>
+
+            <!--Img section-->
+            <div class="_items-align-row-center">
+                <div>
+                    <img class="_img-triangeln" src="/img/calc/trigonometry/right-angled-triangle_3.png"
+                         alt="Right-angled triangle"/>
+                </div>
+                <div>
+                    <img class="_img-function" src="/img/calc/trigonometry/right-angled_functions_2.png"
+                         alt="Functions"/>
+                </div>
+            </div>
+
+            <!--Calc form section-->
+            <div class="_new-section-position _box-background-dark _border-dark">
+                <!--Radio input section-->
+                <div class="_input-radio-form-position _items-align-row-center">
+                    <div class="form-check form-check-inline _items-align-row-center _input-ratio-position">
+                        <input id="r_degrees" type="radio" name="radiobutton"
+                               class="_input-radio form-check-input _border-dark" value="degree" checked>
+                        <label for="r_degrees"
+                               class="_lang-trig-degrees _text-simple _uppercase-each-sentences form-check-label _radio-labels">degrees</label>
+                    </div>
+                    <div class="form-check form-check-inline _items-align-row-center _input-ratio-position">
+                        <input id="r_radians" type="radio" name="radiobutton"
+                               class="_input-radio form-check-input _border-dark" value="radians">
+                        <label for="r_radians"
+                               class="_lang-trig-radians _text-simple _uppercase-each-sentences form-check-label _radio-labels">radians</label>
+                    </div>
+                    <div class="form-check form-check-inline _items-align-row-center _input-ratio-position">
+                        <input id="r_grads" type="radio" name="radiobutton"
+                               class="_input-radio form-check-input _border-dark" value="grads">
+                        <label for="r_grads"
+                               class="_lang-trig-grads _text-simple _uppercase-each-sentences form-check-label _radio-labels">grads</label>
+                    </div>
+                </div>
+                <!--Input value and result section-->
+                <div class="_items-align-row-center">
+                    <!--Select section-->
+                    <div class="_form-select-position">
+                        <select id="trig_func" class="form-select _border-dark">
+                            <option selected value="sin">sin</option>
+                            <option value="cos">cos</option>
+                            <option value="tg">tg</option>
+                            <option value="ctg">ctg</option>
+                        </select>
+                    </div>
+                    <!--Input value section-->
+                    <div class="_items-align-row-center">
+                        <samp class="_text-breaks">(</samp>
+                        <input id="trig_value" class="_input-number _input-number-short _border-dark" type="number"
+                               step="1" min="0"
+                               value="0">
+                        <samp class="_text-breaks">) = </samp>
+                        <samp id="trig_resul" class="_text-simple _item-margin-1rem-around"></samp>
+                    </div>
+                </div>
+                <div>
+                    <button id="calc-button"
+                            class="_lang-button-calc _uppercase-each-sentences btn btn-secondary btn-lg _button-calc"
+                            onclick="trigButton()">calculate
+                    </button>
+                </div>
+            </div>
+
+            <!--Trigonometry Table-->
+            <div class="_new-section-position _box-background-light _border-dark">
+                <div>
+                    <samp class="_lang-trig-table _uppercase-each-sentences _text-minorTitle">trigonometry
+                        table</samp>
+                </div>
+
+                <table class="_trig-table">
+                    <tbody>
+                    <tr>
+                        <td><strong class="_lang-table-angle-degree _uppercase-each-sentences">angles (in
+                            degrees)</strong></td>
+                        <td><strong>0°</strong></td>
+                        <td><strong>30°</strong></td>
+                        <td><strong>45°</strong></td>
+                        <td><strong>60°</strong></td>
+                        <td><strong>90°</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong class="_lang-table-angle-rad _uppercase-each-sentences">angles (in
+                            radian)</strong></td>
+                        <td><strong>0</strong></td>
+                        <td><strong>π/6</strong></td>
+                        <td><strong>π/4</strong></td>
+                        <td><strong>π/3</strong></td>
+                        <td><strong>π/2</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sin θ</strong></td>
+                        <td>0</td>
+                        <td>1/2</td>
+                        <td>1/√2</td>
+                        <td>√3/2</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cos θ</strong></td>
+                        <td>1</td>
+                        <td>√3/2</td>
+                        <td>1/√2</td>
+                        <td>1/2</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tan θ</strong></td>
+                        <td>0</td>
+                        <td>1/√3</td>
+                        <td>1</td>
+                        <td>√3</td>
+                        <td>∞</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cot θ</strong></td>
+                        <td>∞</td>
+                        <td>√3</td>
+                        <td>1</td>
+                        <td>1/√3</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sec θ</strong></td>
+                        <td>1</td>
+                        <td>2/√3</td>
+                        <td>√2</td>
+                        <td>2</td>
+                        <td>∞</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cosec θ</strong></td>
+                        <td>∞</td>
+                        <td>2</td>
+                        <td>√2</td>
+                        <td>2/√3</td>
+                        <td>1</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div th:replace="~{fragments/footer :: footer}"></div>
+    </div>
+</div>
+
+
+<!--Scripts section-->
+<div th:replace="~{fragments/scriptsfragment :: scripts(scriptLink = '/js/calc/trigonometry/trigonometry.js', langJsonPath = '/json/lang/calc/trigonometry/langCalcTrigonometry.json')}"></div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<div th:replace="~{fragments/header :: header(title = 'LCM', cssLick = '/css/calc/numberTheory/lcm.css')}"></div>
+
+<body>
+<!--For good footer position-->
+<div id="page-container">
+    <div id="content-wrap">
+
+        <!--  Navbar section-->
+        <div th:replace="~{fragments/navbar :: navbar}"></div>
+
+        <!--Content section-->
+        <div class="_content-position">
+            <!--Text section-->
+            <div>
+                <samp class="_uppercase-each-sentences _lang-lcm _text-mainTitle">least common multiple</samp>
+                <br>
+                <br>
+                <samp class="_uppercase-each-sentences _lang-lcm-definition-1 _text-simple">the least common multiple
+                    (LCM) of two integers</samp>
+                <samp class="_text-simple"><strong> m </strong></samp>
+                <samp class="_lang-lcm-definition-2 _text-simple">and</samp>
+                <samp class="_text-simple"><strong> n </strong></samp>
+                <samp class="_lang-lcm-definition-3 _text-simple">is the smallest natural number that is divisible by
+                    both</samp>
+                <samp class="_text-simple"><strong> m </strong></samp><samp class="_lang-lcm-definition-2 _text-simple">and</samp>
+                <samp class="_text-simple"><strong>n.</strong></samp>
+            </div>
+
+            <!--Calc form section-->
+            <div class=" _new-section-position _box-background-dark _border-dark">
+
+                <input id="input-number"
+                       class="_lang-placeholder-number-by-commas _input-number _input-number-long _border-light"
+                       type="text" placeholder="Input numbers separated by commas">
+
+                <!--Button section-->
+                <div class="_items-align-row-center">
+                    <div>
+                        <button id="calc-button"
+                                class="_lang-button-calc _uppercase-each-sentences btn btn-secondary btn-lg _button-calc"
+                                onclick="calcButton()">calculate
+                        </button>
+                    </div>
+                    <div>
+                        <button id="reset-button"
+                                class="_lang-button-reset _uppercase-each-sentences btn btn-secondary btn-lg _button-reset"
+                                onclick="resetButton()">reset
+                        </button>
+                    </div>
+                </div>
+
+                <!--Result section-->
+                <div class="_new-section-position _text-align-center _items-align-row-center">
+                    <samp id="result-title" class="_lang-result _uppercase-each-sentences _text-minorTitle">
+                        least common multiple =</samp>
+                    <samp id="result" class="_text-minorTitle"></samp>
+                </div>
+            </div>
+
+            <!--Examples section-->
+            <div class="_new-section-position _box-background-dark _border-dark">
+                <samp class="_lang-example _uppercase-each-sentences _text-mainTitle">examples</samp>
+                <br>
+                <samp class="_lang-example-title _uppercase-each-sentences _text-minorTitle">find the HCF of numbers 450
+                    and 390.</samp>
+                <br>
+
+                <samp class="_lang-example-1 _uppercase-each-sentences _text-simple _item-margin-05rem-vertical ">let's
+                    represent numbers as the product of their prime factors, for it use </samp>
+                <a class="_lang-link-prime-factors _text-link _text-simple" href="/prime-factors">factoring a number
+                    into prime factors</a>
+
+                <div class="_text-align-center _items-column">
+                    <samp class="_text-simple ">450 = 2 · 3 · 3 · 5 · 5</samp>
+                    <samp class="_text-simple _item-margin-05rem-vertical">390 = 2 · 3 · 5 · 13</samp>
+                </div>
+                <samp class="_lang-example-2 _uppercase-each-sentences _text-simple _item-margin-05rem-vertical ">we see
+                    that the common factors are 2, 3 and 5. then HCF(450, 390) = 2 · 3 · 5 = 30.</samp>
+                <br>
+                <br>
+                <samp class="_lang-example-3 _uppercase-each-sentences _text-simple _item-margin-05rem-vertical ">knowing
+                    the HCF of these numbers, you can easily find their LCM. to do this, the product of numbers should
+                    be divided by their HCF:</samp>
+                <br>
+                <div class="_text-align-center">
+                    <div class="_frac ">
+                        <span id="reduce-result-num" class="_text-simple">450 · 390</span>
+                        <span class="symbol">/</span>
+                        <span id="reduce-result-denom" class="bottom _text-simple">30</span>
+                    </div>
+                    <samp class="_text-simple">= 5850</samp>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div th:replace="~{fragments/footer :: footer}"></div>
+    </div>
+</div>
+
+
+<!--Scripts section-->
+<div th:replace="~{fragments/scriptsfragment :: scripts(scriptLink = '/js/calc/numberTheory/lcm.js', langJsonPath = '/json/lang/calc/numberTheory/lcm.json')}"></div>
+</body>
+</html>

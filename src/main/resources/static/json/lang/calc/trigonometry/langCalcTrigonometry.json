@@ -1,0 +1,43 @@
+{
+  "trig-func": {
+    "en": "trigonometric functions",
+    "ua": "тригонометричні функції",
+    "ru": "тригонометрические функции"
+  },
+  "trig-definition": {
+    "en": "in mathematics, the trigonometric functions are real functions which relate an angle of a right-angled triangle to ratios of two side lengths. the trigonometric functions most widely used in modern mathematics are the sine, the cosine, and the tangent.",
+    "ua": "в математиці, тригонометричні функції - це дійсні функції, які зв'язують кут прямокутного трикутника зі співвідношенням довжин двох сторін. тригонометричні функції, які найбільш широко використовуються в сучасній математиці, це синус, косинус та тангенс",
+    "ru": "в математике, тригонометрические функции — это действительные функции, которые связывают угол прямоугольного треугольника с отношением длин двух сторон. тригонометрические функции, наиболее широко используемые в современной математике, это синус, косинус и тангенс."
+  },
+  "trig-degrees": {
+    "en": "degrees",
+    "ua": "градуси",
+    "ru": "градусы"
+  },
+  "trig-radians": {
+    "en": "radians",
+    "ua": "радіани",
+    "ru": "радианы"
+  },
+  "trig-grads": {
+    "en": "grads",
+    "ua": "гради",
+    "ru": "грады"
+  },
+
+  "trig-table": {
+    "en": "trigonometry table",
+    "ua": "таблиця тригонометричних функцій",
+    "ru": "таблица тригонометрических функций"
+  },
+  "table-angle-degree": {
+    "en": "angles (in degrees)",
+    "ua": "кути (в градусах)",
+    "ru": "углы (в градусах)"
+  },
+  "table-angle-rad": {
+    "en": "angles (in radian)",
+    "ua": "кути (в радіанах)",
+    "ru": "углы (в радианах)"
+  }
+}
